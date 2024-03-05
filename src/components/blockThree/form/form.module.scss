@@ -21,7 +21,7 @@
 }
 
 .positionTitle {
-  @include defaultText(#000000);
+  @include defaultText($defaultText-color);
   text-align: left;
 }
 
@@ -43,8 +43,8 @@
 }
 
 .customFileButton {
-  @include defaultText(#000000);
-  border: 1px solid #000000;
+  @include defaultText($defaultText-color);
+  border: 1px solid $defaultText-color;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
   width: 22%;

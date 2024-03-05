@@ -22,7 +22,7 @@
 .title {
   position: relative;
   right: -10px;
-  @include defaultText(#000000);
+  @include defaultText($defaultText-color);
 }
 
 .checkbox {

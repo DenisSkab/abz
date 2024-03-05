@@ -2,7 +2,7 @@
 @import '../../assest/scss/mixin.scss';
 
 .button {
-  @include defaultText(#000000);
+  @include defaultText($defaultText-color);
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;

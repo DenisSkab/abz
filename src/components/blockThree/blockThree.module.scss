@@ -1,4 +1,5 @@
 @import '../../assest/scss/mixin.scss';
+@import '../../assest/scss/variables.scss';
 
 .block {
   display: flex;
@@ -7,7 +8,7 @@
 }
 
 .title {
-  @include defaultTitle(#000000);
+  @include defaultTitle($defaultText-color);
   margin-top: 140px;
 
   @media screen and (max-width: 512px) {
@@ -16,5 +17,5 @@
 }
 
 .blockSuccess {
-  @include defaultTitle(#000000);
+  @include defaultTitle($defaultText-color);
 }
