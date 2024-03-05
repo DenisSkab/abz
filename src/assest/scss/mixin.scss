@@ -1,0 +1,17 @@
+@mixin defaultText($color) {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: $color;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+}
+
+@mixin defaultTitle($color) {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  color: $color;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+}

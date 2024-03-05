@@ -1,0 +1,16 @@
+@import '../../assest/scss/mixin.scss';
+
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  @include defaultTitle(#000000);
+  margin-top: 140px;
+
+  @media screen and (max-width: 512px) {
+    max-width: 328px;
+  }
+}

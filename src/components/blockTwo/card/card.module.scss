@@ -1,0 +1,36 @@
+@import '../../../assest/scss/mixin.scss';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 370px;
+  height: 254px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 16px;
+  margin-bottom: 29px;
+  overflow: hidden;
+
+  @media screen and (max-width: 512px) {
+    max-width: 328px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text {
+  @include defaultText(rgba(0, 0, 0, 0.87));
+  max-width: 350px;
+}
+
+.cardImage {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}

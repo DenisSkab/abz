@@ -1,0 +1,51 @@
+@import '../../../../assest/scss/variables.scss';
+@import '../../../../assest/scss/mixin.scss';
+
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.input {
+  position: absolute;
+  left: -5px;
+  top: -2px;
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.title {
+  position: relative;
+  right: -10px;
+  @include defaultText(#000000);
+}
+
+.checkbox {
+  width: 19px;
+  height: 19px;
+  border: 1px solid $disable-color;
+  border-radius: 50%;
+}
+
+.checked {
+  position: relative;
+  border: 1px solid #00bdd3ff;
+
+  &::after {
+    position: relative;
+    top: 50%;
+    transform: translate(30%, -50%);
+    display: block;
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: #00bdd3ff;
+    border-radius: 50%;
+    z-index: 9999;
+  }
+}

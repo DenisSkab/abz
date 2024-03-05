@@ -1,0 +1,53 @@
+@import '../../../../assest/scss/mixin.scss';
+@import '../../../../assest/scss/variables.scss';
+
+.wrapper {
+  position: relative;
+  height: 54px;
+  width: 100%;
+  max-width: fit-content;
+  margin-bottom: 50px;
+}
+
+.field {
+  width: 360px;
+  height: 54px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid $disable-color;
+  padding-left: 16px;
+  z-index: 1;
+
+  @media screen and (max-width: 512px) {
+    width: 308px;
+  }
+}
+
+.placeholder {
+  position: absolute;
+  @include defaultText($disable-color);
+  left: 16px;
+  top: 30%;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.focus {
+  @extend .placeholder;
+  top: -20%;
+  background-color: $background-color;
+  padding: 0 5px;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.error {
+  @extend .field;
+  border-color: #cb3d40;
+}
+
+.errorText {
+  position: absolute;
+  bottom: -90%;
+  color: #cb3d40;
+}

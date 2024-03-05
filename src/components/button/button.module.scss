@@ -1,0 +1,25 @@
+@import '../../assest/scss/variables.scss';
+@import '../../assest/scss/mixin.scss';
+
+.button {
+  @include defaultText(#000000);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  width: 100%;
+  min-width: 100px;
+  width: fit-content;
+  padding: 4px 0;
+  border: none;
+  border-radius: 80px;
+  background-color: $primary-color;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.disable {
+  @extend .button;
+  background-color: $disable-color;
+  color: #fff;
+}
