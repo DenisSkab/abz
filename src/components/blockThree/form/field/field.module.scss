@@ -51,3 +51,11 @@
   bottom: -90%;
   color: #cb3d40;
 }
+.phone {
+  position: absolute;
+  @include defaultText($disable-color);
+  top: 48px;
+  left: 15px;
+  font-size: 12px;
+  line-height: 12px;
+}

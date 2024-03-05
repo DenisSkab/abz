@@ -59,6 +59,9 @@ const Field: React.FC<Props> = ({
       >
         {placeholder}
       </span>
+      {type === 'tel' && !error && (
+        <p className={style.phone}>+38 (XXX) XXX - XX - XX</p>
+      )}
       <p className={style.errorText}>{error}</p>
     </label>
   );

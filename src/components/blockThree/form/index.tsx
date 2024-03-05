@@ -11,13 +11,17 @@ import { NewUser } from '../../../utils/types';
 
 const MAX_FILE_SIZE = 10 * 1024 * 1024;
 
-const Form = () => {
+type Props = {
+  setIsSuccess: () => void;
+};
+
+const Form: React.FC<Props> = ({ setIsSuccess }) => {
   const [user, setUser] = useState({
     name: '',
     email: '',
     phone: '',
     position: '1',
-    photo: null,
+    photo: '',
   });
   const [formatError, setFormatError] = useState(false);
 
@@ -47,6 +51,7 @@ const Form = () => {
           'Invalid file type. Please select a file with the extension .jpg, .jpeg'
         );
         event.target.value = '';
+        setUser({ ...user, photo: '' });
       } else if (file.size > MAX_FILE_SIZE) {
         alert(
           `The file is too large. Maximum file size - ${
@@ -54,6 +59,7 @@ const Form = () => {
           } MB.`
         );
         event.target.value = '';
+        setUser({ ...user, photo: '' });
       } else {
         setUser({ ...user, photo: file as any });
       }
@@ -62,7 +68,10 @@ const Form = () => {
 
   const addUser = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    getToken().then((res) => postUser(res.token, user));
+    getToken().then((res) => {
+      postUser(res.token, user);
+      setIsSuccess();
+    });
   };
 
   const isObjectValuesNotEmpty = (obj: NewUser) => {

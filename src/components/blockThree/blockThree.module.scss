@@ -14,3 +14,7 @@
     max-width: 328px;
   }
 }
+
+.blockSuccess {
+  @include defaultTitle(#000000);
+}
