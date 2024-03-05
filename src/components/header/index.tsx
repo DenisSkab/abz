@@ -1,6 +1,6 @@
 import Button from '../button';
 
-import logo from '../../assest/images/Logo.png';
+import logo from '../../assest/images/Logo.svg';
 
 import style from './header.module.scss';
 
